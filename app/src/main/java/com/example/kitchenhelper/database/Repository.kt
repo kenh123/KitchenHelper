@@ -12,7 +12,7 @@ class Repository() {
     private var recipeDAO: RecipeDAO? = null
 
     constructor(app : Application) : this() {
-        var db : DatabaseBuilder? = DatabaseBuilder.getDatabase(app.applicationContext)
+        val db : DatabaseBuilder? = DatabaseBuilder.getDatabase(app.applicationContext)
 
         if (db != null) {
             userDAO = db.userDAO()
